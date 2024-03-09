@@ -9,16 +9,16 @@
 * {
     margin: 0px;
     height: 0px;
+    box-sizing: border-box;
 
 }
 
-h1 {
-    font-family:"Kode Mono";
-}
+
 
 body{
     width: 100vw;
     height: 100vh;
+    padding: 5rem;
 }
 
 .head {
@@ -28,6 +28,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
+
 
 .search {
     background-color: red;
@@ -41,6 +44,7 @@ body{
 .search * {
     margin: 10px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .search button{
@@ -56,10 +60,8 @@ body{
 
 
 
-
-
 .container-movies {
-    width: 90%;
+    width: 100%;
     height: 60%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -67,18 +69,23 @@ body{
 
 .movie-card {
     display: flex;
-    flex-direction: column;
+    border: solid black 1px;
     width: 100%;
     height: 100%;
-
-    border: solid black 1px;
 }
-
-.title-card {
+.left-card {
+    width: 50%;
 
 }
+.right-card {
+    width: 50%;
+    height: 100%;
+    display: flex;
 
-.img-card{
-    width: 10rem;
-    height: 15rem;
+}
+.right-card h1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+
 }

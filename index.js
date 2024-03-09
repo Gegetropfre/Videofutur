@@ -34,6 +34,8 @@ function getMovies(searchTerm) {
                     const img = movie.Poster
 
                     const movieCard = document.createElement('div')
+                    const leftCard = document.createElement('div')
+                    const rightCard = document.createElement('div')
                     const titleCard = document.createElement('h1')
                     const dateCard = document.createElement('h2')
                     const imgCard = document.createElement('img')
@@ -43,15 +45,20 @@ function getMovies(searchTerm) {
                     imgCard.src = img
                     imgCard.alt = "marche pas"
 
+
+                    leftCard.classList.add('left-card')
+                    rightCard.classList.add('right-card')
                     movieCard.classList.add('movie-card')
                     titleCard.classList.add('title-card')
                     dateCard.classList.add('date-card')
                     imgCard.classList.add('img-card')
                     
 
-                    movieCard.appendChild(titleCard)
-                    movieCard.appendChild(dateCard)
-                    movieCard.appendChild(imgCard)
+                    movieCard.appendChild(leftCard)
+                    movieCard.appendChild(rightCard)
+                    rightCard.appendChild(titleCard)
+                    rightCard.appendChild(dateCard)
+                    leftCard.appendChild(imgCard)
                     
                     containerMovies.appendChild(movieCard)
                 })
